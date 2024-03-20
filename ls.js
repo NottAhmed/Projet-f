@@ -19,6 +19,6 @@
 
             // If both email and password are valid, proceed with login
             alert("Login successful!");
-            // Here you can add further logic, such as submitting the form or redirecting the user
+            window.location.href = "index.html";
         }
 
