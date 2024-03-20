@@ -13,4 +13,3 @@ function loginvalid(){
     
 }
 
-loginvalid()
