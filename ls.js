@@ -4,10 +4,10 @@ function loginvalid(){
     var dotIndex = adr.lastIndexOf('.');
 
     if (atIndex < 1 || dotIndex < atIndex + 2 || dotIndex + 2 >= adr.length) {
-        console.log("Invalid email");
+        alert("Invalid email");
         return false;
     } else {
-        console.log("Email is valid");
+        alert("Email is valid");
         return true;
     }
     
