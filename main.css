@@ -199,3 +199,81 @@ a {
   height: 30px;
   border-radius: 50%;
 }
+
+
+     .form-style {
+        padding: 15px;
+        background-color: #f0f0f0;
+        border: none;
+        border-radius: 4px;
+        appearance: none; /* Remove default appearance */
+        -webkit-appearance: none; /* Remove default appearance for webkit browsers */
+        background-image: url('filter.png'); /* Set background image */
+        
+        background-size: 20px; /* Adjust size of the background image */
+        background-repeat: no-repeat; /* Prevent repetition of background image */
+        background-position: left ; 
+        padding-left: 5x; /* Adjust padding to make space for the background image */
+        padding-right: 10px;
+        cursor: pointer;
+    }
+    .research-bar {
+        display: flex;
+        align-items: center;
+        width: 600px; /* Adjust width as needed */
+        margin: 50px;
+        
+    }
+    .search-input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px 0 0 4px;
+        margin-right: 10px;
+    }
+    .search-button {
+        padding: 8px 12px;
+        background-color: #6a31d3;
+        color: #fff;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+
+    .search-button img {
+        width: 30px; /* Adjust size as needed */
+        height: 30px; /* Adjust size as needed */
+        vertical-align: middle; /* Align the image vertically */
+    }
+ .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150 px,1fr));
+    gap: 0.25rem;
+    margin-top: 1rem;
+
+
+ }
+.card{
+border: 1px solid black;
+background-color: white;
+padding: .5rem ;
+
+
+
+}
+.card> .docname{
+
+margin-bottom: .25rem;
+
+}
+.card >.body{
+font-size: .8rem;
+
+
+}
+
+.hide{
+display: none;
+
+
+}
