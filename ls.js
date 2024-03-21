@@ -27,7 +27,7 @@
 
 
         if (s==1&& p==1){
-            window.location.href = "index.html";
+            window.location.href = "main.html";
         } 
 
 
