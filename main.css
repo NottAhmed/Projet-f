@@ -198,6 +198,32 @@ a {
 }
 
 
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-menu .menu-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navbar-profile:hover .profile-menu {
+    display: block;
+}
+
+
+
+
+
+
+
+
      .form-style {
         padding: 15px;
         background-color: #f0f0f0;
