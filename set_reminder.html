@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> Set Reminder</title>
+    <style>
+        body {
+            font-family:"Arial",sans-serif;
+            background-color: #eaeaea;
+        }
+        .container{
+            max-width: 500px ;
+            margin: auto;
+            background-color: #fff;
+            padding: 1px 20px 20px 20px ;
+            border-radius: 5px ;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+        label,
+        input,
+        button{
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input{
+            width: 100%;
+            margin-top: 5px;
+        }
+         table{
+            width: 100%;
+           border-collapse: collapse;
+           margin-top: 10px ;
+         }
+         th, 
+         td{
+            padding: 5px ;
+            border: 1px solid #ddd;
+            text-align: center;
+         }
+         th{
+          background-color: rgb(172, 106, 204); 
+          color: white;
+         }
+         button{
+            background-color:rgb(172, 106, 204);  
+            color: white;
+            padding: 5px;
+            border: none;
+         }
+         button:hover{
+            background-color: rgb(172, 106, 204); 
+         }
+
+
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2 style="text-align: center">  Set Reminder </h2>
+            <label for="">Title :</label>
+            <input type="text" id="title" />
+            <label for="">Description :</label>
+            <input type="text" id="description" />
+            <label for="">Date :</label>
+            <input type="date" id="date" />
+            <label for="">time :</label>
+            <input type="time" id="time" />
+
+            <button  style="width: 100%" onclick="scheduleReminder();">
+                  Schedule Reminder
+            </button>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Date & time</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+              <tbody id="reminderTableBody"></tbody>
+            </table>
+        </div>
+
+        <audio src="notificationSoundeffect.mp3" id="notificationSound"></audio>
+        
+        <script>
+            //Ask user to allow notification access
+            if("Notification" in window){
+                Notification.requestPermission().then(function(permission){
+                    if(Notification.permission !=="granted"){
+                        alert("please allow notification access!");
+                        Location.reload();
+                    }
+                });
+            }
+            var timeoutIds =[];
+
+            function ScheduleReminder(){
+                var Title = document.getElementById("title").value;
+                var description = document.getElementById("description").value;
+                var date = document.getElementById("date").value;
+                var time = document.getElementById("time").value;
+
+                var dateTimeString = date + " " + time;
+                var scheduledTime = new Date(dateTimeString);
+                var currentTime = new Date();
+                var TimeDifference = scheduledTime - currentTime ;
+
+                if(TimeDifference > 0){
+                    addReminder(title, description ,dateTimeString);
+
+                    var timeoutId = setTimeout(function(){
+                        document.getElementById("notificationSound").play();
+
+                        var notification = new Notification(title, {
+                            body: description,
+                            requireInteraction: true,
+                        });
+                    }, TimeDifference);
+
+                    timeoutIds.push(timeoutId);
+                }
+                else{
+                    alert("the scheduled time is in the past!");
+                }
+            }
+            function addReminder(Title, description, dateTimeString){
+                   var tableBody = document.getElementById("reminderTableBody");
+
+                   var row = tableBody.insertRow();
+
+                   var titleCell = row.insertCell(0);
+                   var descriptionCell = row.insertCell(1);
+                   var datetimeCell = row.insertCell(2);
+                   var action = row.insertCell(3);
+
+                   titleCell.innerHTML = title;
+                   descriptionCell.innerHTML = description;
+                   datetimeCell.innerHTML = dateTimeString;
+                   actionCell.innerHTML = 
+                        '<button onclick = "deleteReminder(this);">Delete</button>';
+
+            }
+
+            function deleteReminder(button) {
+                var row = button.closest("tr");
+                var index = row.rowIndex;
+
+                clearTimeout(timeoutIds[index - 1]);
+                timeoutIds.splice(index -1, 1);
+
+                row.remove();
+            }
+        </script>
+    </body>
+</html>
