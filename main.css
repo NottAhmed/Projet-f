@@ -148,7 +148,7 @@ a {
   padding: 0.5rem 1rem;
 }
 .navbar .navbar-menu .navbar-nav > li > a:hover {
-  color: #66f;
+  color: #680747;
 }
 @media (max-width: 768px) {
   .navbar .navbar-menu .navbar-nav > li > a {
@@ -156,11 +156,11 @@ a {
   }
 }
 .navbar .navbar-menu .navbar-nav > li.active a {
-  color: #66f;
+  color: #680747;
 }
 
 .navbar .navbar-header > a span {
-  color: #66f;
+  color: #680747;
 }
 
 .navbar .navbar-header {
@@ -170,17 +170,32 @@ a {
 }
 
 .navbar .navbar-header .logo {
-  order: 1; /* Ensure the logo appears before other elements */
+  order: 1; 
   margin-left: 0px;
-  margin-right: 10%; /* Pushes the logo to the right */
+  margin-right: 10%; 
 }
 
 
 .navbar .navbar-header .logo img {
   max-width: 35%;
   height: auto;
-  margin-left: 10%;
+  margin-right: 40%;
   
+}
+.navbar-notif {
+  margin-left: 9%;
+}
+.navbar-notif img {
+  height: 30px;
+  border-radius: 50%;
+}
 
-  /* Additional styles like padding, border-radius, etc. */
+.navbar-profile {
+  margin-left: 3%;
+  
+}
+
+.navbar-profile img {
+  height: 30px;
+  border-radius: 50%;
 }
