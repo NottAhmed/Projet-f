@@ -187,15 +187,15 @@ a {
   border-radius: 50%;
 }
 
-
+.navbar-profile {
+  margin-left: 3%;
+  
+}
 .navbar-profile img { 
   height: 30px; 
   border-radius: 50%; 
 }
-.navbar-profile {
-    position: relative;
-    display: inline-block;
-}
+
 
 
 
