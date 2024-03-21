@@ -195,8 +195,10 @@ a {
     position: relative;
     display: inline-block;
 } 
-
-
+.profile-menu{
+    position: relative;
+    display: inline-block;
+} 
 .profile-link img { 
   height: 30px; 
   border-radius: 50%; 
