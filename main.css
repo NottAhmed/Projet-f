@@ -204,9 +204,22 @@ a {
   border-radius: 50%; 
 }
 
+.notif-menu{
+    position: relative;
+    display: inline-block;
+} 
 
-
-
+.notif-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  
+  
+}
 .profile-menu {
     display: none;
     position: absolute;
@@ -217,6 +230,14 @@ a {
     border-radius: 10px;
   
   
+}
+.notif-menu .menu-item {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.navbar-profile:hover .notif-menu {
+    display: block;
 }
 
 .profile-menu .menu-item {
