@@ -236,7 +236,7 @@ a {
     cursor: pointer;
 }
 
-.navbar-profile:hover .notif-menu {
+.navbar-notif:hover .notif-menu {
     display: block;
 }
 
