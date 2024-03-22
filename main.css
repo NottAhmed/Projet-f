@@ -195,6 +195,10 @@ a {
     position: relative;
     display: inline-block;
 } 
+.navbar-notif {
+    position: relative;
+    display: inline-block;
+} 
 .profile-menu{
     position: relative;
     display: inline-block;
