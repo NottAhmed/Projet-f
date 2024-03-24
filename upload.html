@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        label {
+            display: inline-block;
+            height: 100px;
+            width: 150px;
+            border-radius: 60px;
+            border: 1px dashed #999;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+        label:hover {
+            color: #de0611;
+            border: 1px dashed #de0611;
+        }
+    </style>
+        <script>
+            function showFileName() {
+                var fileInput = document.getElementById('file').value;
+                
+                alert(fileInput)
+            }
+        </script>
+</head>
+<body>
+    <h1>Upload document</h1>
+    <form id="uploadForm" enctype="multipart/form-data"onsubmit="showFileName()">
+        <input type="text" name="name" placeholder="nom document"><br>
+        <select id="selection" >
+            <option value="option0" selected>type document</option>
+            <option value="cours">  cours</option>
+            <option value="examen">  examen</option>
+            <option value="ds">  ds</option>
+            <option value="td">  td</option>
+          </select><br>
+        <input type="file" id="file" />
+        <label for="file">Upload File</label><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
