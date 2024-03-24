@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        #sidebar {
+            width: 250px;
+            background-color: #30578a;
+            color: #ffffff;
+            padding: 20px;
+        }
+        #main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .room-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .room-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .room-list li .room-name {
+            flex-grow: 1;
+        }
+        .create-room-button, .join-room-button {
+            background-color: #7289da;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .create-room-button:hover, .join-room-button:hover {
+            background-color: #677bc4;
+        }
+        .connect-button, .disconnect-button {
+            background-color: #43b581;
+            color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .disconnect-button {
+            background-color: #f04747;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h2>Joined Rooms</h2>
+        <ul class="room-list">
+            <li>
+                <span class="room-name">Room 1</span>
+                <button class="connect-button">Connect</button>
+                <button class="disconnect-button">Disconnect</button>
+            </li>
+            <li>
+                <span class="room-name">Room 2</span>
+                <button class="connect-button">Connect</button>
+                <button class="disconnect-button">Disconnect</button>
+            </li>
+            <li>
+                <span class="room-name">Room 3</span>
+                <button class="connect-button">Connect</button>
+                <button class="disconnect-button">Disconnect</button>
+            </li>
+            <!-- Add more rooms here -->
+        </ul>
+    </div>
+    <div id="main-content">
+        <button class="create-room-button">Create Room</button>
+        <button class="join-room-button">Join Room</button>
+    </div>
+</body>
+</html>
