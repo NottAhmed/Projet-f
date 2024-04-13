@@ -27,7 +27,10 @@
 
 
         if (s==1&& p==1){
-            window.location.href = "main.html";
+            //document.getElementById("myForm0").submit();
+                
+            window.location.href = "main.html";//hedhi bch na7iwha flekher (already in php)
+                
         } 
 
 
@@ -95,6 +98,8 @@
 
         if (n==1&& l==1&&e==1&& p==1){
             alert("compte registree");
+
+                // document.getElementById("myForm").submit();
         }
 
 
