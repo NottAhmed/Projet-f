@@ -11,14 +11,14 @@
             alert("Invalid email");
            
         } else {
-            alert("Email is valid");
+            //alert("Email is valid");
             s=1;
         }
         if (pass === '') {
             alert("Please enter your password.");
             
         }else{ 
-            alert("passowrd is valid");
+            //alert("passowrd is valid");
             p=1;
 
         }
@@ -64,7 +64,7 @@
 
         }else{
             n=1;
-            alert("full name valid");
+            //alert("full name valid");
         }
 
         if(sel=='option0'){
@@ -80,14 +80,14 @@
             alert("Invalid email");
            
         } else {
-            alert("Email is valid");
+            //alert("Email is valid");
             e=1;
         }
         if (pass === '') {
             alert("Please enter your password.");
             
         }else{ 
-            alert("passowrd is valid");
+            //alert("passowrd is valid");
             p=1;
 
         }
