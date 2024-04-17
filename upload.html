@@ -23,26 +23,20 @@
             border: 1px dashed #de0611;
         }
     </style>
-        <script>
-            function showFileName() {
-                var fileInput = document.getElementById('file').value;
-                
-                alert(fileInput)
-            }
-        </script>
 </head>
 <body>
     <h1>Upload document</h1>
-    <form id="uploadForm" enctype="multipart/form-data"onsubmit="showFileName()">
+
+    <form id="uploadForm" enctype="multipart/form-data" method="POST"action="upload.php">
         <input type="text" name="name" placeholder="nom document"><br>
-        <select id="selection" >
+        <select id="selection" name="sel">
             <option value="option0" selected>type document</option>
             <option value="cours">  cours</option>
             <option value="examen">  examen</option>
             <option value="ds">  ds</option>
             <option value="td">  td</option>
-          </select><br>
-        <input type="file" id="file" />
+        </select><br>
+        <input type="file" id="file" name="file"/>
         <label for="file">Upload File</label><br>
         <button type="submit">Submit</button>
     </form>
